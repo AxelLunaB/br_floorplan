@@ -16,35 +16,29 @@
        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
   </head>
-    <div id="app" class="h-100">
+    <div id="app">
      <body>
-      <div class="container-fluid" style="height: 100vh">
+      <div class="container-fluid">
         <nav class="navbar navbar-back">
-              <a class="navbar-brand" href="#">
-                  <img :src="currentNavIco" width="150em" height="75em" class="d-inline-block" alt="Logo">
-              </a>
-        </nav>
-<!--
+          <a class="navbar-brand ml-auto" href="#">
+              <img :src="currentNavIco" width="150em" height="75em" class="d-inline-block" alt="Logo">
+          </a>
+          </nav>
 
         <div class="row justify-content-center">
-          <div class="col-lg-4 my-auto">
-            <div class="box">
-              <div class="segment">
-                  <div class="selector center">
-                      <img src="./back/src/img/Seccion.jpg" class="selector-img" />
-                      <div >
-                        <div class="selector-button fl-1" @click="selectorClickHandler(0, $event.path[0])"></div>
-                        <div class="selector-button fl-2" @click="selectorClickHandler(1, $event.path[0])"></div>
-                        <div class="selector-button fl-3" @click="selectorClickHandler(2, $event.path[0])"></div>
-                        <div class="selector-button fl-4" @click="selectorClickHandler(3, $event.path[0])"></div>
-                        <div class="selector-button fl-5" @click="selectorClickHandler(4, $event.path[0])"></div>
-                      </div>
-        
-                    </div>
-                </div>
-              </div>  
+
+          <div class="col-lg-4">
+            <div class="selector">
+              <img src="src/img/Seccion_n.jpg" class="selector-img" />
+              <div>
+                <div class="selector-button fl-1" @click="selectorClickHandler(0, $event.path[0])"></div>
+                <div class="selector-button fl-2" @click="selectorClickHandler(1, $event.path[0])"></div>
+                <div class="selector-button fl-3" @click="selectorClickHandler(2, $event.path[0])"></div>
+                <div class="selector-button fl-4" @click="selectorClickHandler(3, $event.path[0])"></div>
+                <div class="selector-button fl-5" @click="selectorClickHandler(4, $event.path[0])"></div>
+              </div>
             </div>
-            
+          </div>
 
           <div class="col-lg-8 my-auto">
             <main>
@@ -129,11 +123,11 @@
 
       </div>
       <div class="logo-bosque">
-        <img src="src/img/UI/logo_residence.png" / class="logo-img">
+        <img src="src/img/UI/logo_residence.png" class="logo-img" />
       </div>
       <div class="logo-club">
-        <img src="src/img/UI/logo_vipclub2.png" / class="logo-img">
-      </div> -->
+        <img src="src/img/UI/logo_vipclub2.png" class="logo-img" />
+      </div>
      </body>
   </div>
 </div>
