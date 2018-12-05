@@ -19,10 +19,9 @@
     <div id="app">
      <body>
       <div class="container-fluid" style="height: 100vh">
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-back">
             <a class="navbar-brand" href="#">
-              <img src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-              CC VIP RESIDENCES
+              <img :src="currentNavIco" width="100" height="50" class="d-inline-block align-top" alt="">
             </a>
         </nav>
 
@@ -37,7 +36,7 @@
                 <div class="selector-button fl-4" @click="setCurrentFloor(3)"></div>
                 <div class="selector-button fl-5" @click="setCurrentFloor(4)"></div>
               </div>
-            
+
             </div>
           </div>
           <div class="col-8">
@@ -109,7 +108,7 @@
           </div>
 
          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-           <div class="modal-dialog modal-lg modal-dialog-centered">
+           <div class="modal-dialog modal modal-dialog-centered">
              <div class="modal-content">
                <img :src="currentFloorImage"/>
                <div class="modal-header">
@@ -121,8 +120,11 @@
          </div>
 
       </div>
-      <div class="logo">
-        <img src="https://via.placeholder.com/200x70" / class="logo-img">
+      <div class="logo-bosque">
+        <img src="src/img/UI/logo_residence.png" / class="logo-img">
+      </div>
+      <div class="logo-club">
+        <img src="src/img/UI/logo_vipclub2.png" / class="logo-img">
       </div>
      </body>
   </div>

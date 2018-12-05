@@ -4,10 +4,12 @@ new Vue({
   data:{
     hotFloorplan:true,
     currentOrientation: 0,
+    currentNavIco: 'src/img/UI/logo_vipclub.png',
     currentTxt: "",
     currentFloor: 0,
-    currentImage:'src/img/CC_01.jpg',
+    currentImage:'src/img/CC_01_n.jpg',
     currentFloorImage: '',
+    imgHori:false,
     hotspotslvl:[
      {
            hotspots:[
@@ -350,12 +352,12 @@ new Vue({
 ],
 
 
-    floorImages:['src/img/CC_01.jpg',
-    'src/img/CC_02.jpg',
-    'src/img/CC_03.jpg',
-    'src/img/CC_04.jpg',
-    'src/img/CC_05.jpg',
-    'src/img/TR_01.jpg']
+    floorImages:['src/img/CC_01_n.jpg',
+    'src/img/CC_02_n.jpg',
+    'src/img/CC_03_n.jpg',
+    'src/img/CC_04_n.jpg',
+    'src/img/CC_05_n.jpg',
+    'src/img/TR_01_n.jpg']
   },
   methods:{
 
@@ -384,6 +386,11 @@ new Vue({
 
     },
     setPopUpData: function (imgData,txtData){
+      var leimg = new Image();
+      leimg.src = imgData;
+      var width;
+      var height;
+      console.log(leimg.height);
       this.currentFloorImage = imgData;
       this.currentTxt = txtData;
     }
