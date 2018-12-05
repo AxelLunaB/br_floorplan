@@ -16,35 +16,43 @@
        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
   </head>
-    <div id="app">
+    <div id="app" class="h-100">
      <body>
-      <div class="container-fluid" style="height: 100vh">
+      
+      <div class="container-fluid h-100">
         <nav class="navbar navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
               <img src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
               CC VIP RESIDENCES
             </a>
         </nav>
+      
 
-        <div class="row justify-content-center" style="height: 70vh">
-          <div class="col-4 hidden-md-down">
-            <div class="selector">
-              <!-- <img src="./back/src/img/Seccion.jpg" class="selector-img" /> -->
-              <div >
-                <div class="selector-button fl-1" @click="setCurrentFloor(0)"></div>
-                <div class="selector-button fl-2" @click="setCurrentFloor(1)"></div>
-                <div class="selector-button fl-3" @click="setCurrentFloor(2)"></div>
-                <div class="selector-button fl-4" @click="setCurrentFloor(3)"></div>
-                <div class="selector-button fl-5" @click="setCurrentFloor(4)"></div>
-
-              </div>
-
+        <div class="row justify-content-center">
+          <div class="col-4 my-auto">
+            <div class="box">
+              <div class="segment">
+                  <div class="selector center">
+                      <!-- <img src="./back/src/img/Seccion.jpg" class="selector-img" /> -->
+                      <div >
+                        <div class="selector-button fl-1" @click="setCurrentFloor(0)"></div>
+                        <div class="selector-button fl-2" @click="setCurrentFloor(1)"></div>
+                        <div class="selector-button fl-3" @click="setCurrentFloor(2)"></div>
+                        <div class="selector-button fl-4" @click="setCurrentFloor(3)"></div>
+                        <div class="selector-button fl-5" @click="setCurrentFloor(4)"></div>
+        
+                      </div>
+        
+                    </div>
+                </div>
+              </div>  
             </div>
-          </div>
-          <div class="col-8">
-            <main class="main">
-                <div v-if="hotFloorplan">
-                  <div class="container">
+            
+
+          <div class="col-8 my-auto">
+            <main>
+                <div v-if="hotFloorplan" class="box">
+                  <div class="segment">
                     <div class="media">
                       <figure><img :src="currentImage"/></figure>
                     </div>
