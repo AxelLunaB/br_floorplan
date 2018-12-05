@@ -52,7 +52,10 @@
             <main>
                 <div v-if="hotFloorplan" class="box">
                   <div class="segment">
-                    <div class="media" id="architectural-plan">
+                    <div class="media " id="architectural-plan">
+
+                      <figure><img :src="currentImage"/></figure>
+
                       <div class="hotspots">
                         <template v-if="currentFloor == 0">
                           <template v-for="(hot,key,index) in filteredFloor(0)">
@@ -83,7 +86,6 @@
                           </template>
                         </template>
                     </div>
-                    <figure><img :src="currentImage"/></figure>
                   </div>
                 </div>
               </div>
