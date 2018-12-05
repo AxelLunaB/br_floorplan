@@ -27,20 +27,24 @@
 
         <div class="row justify-content-center">
 
-          <div class="col-md-4">
+          <div class="col-lg-3">
+            <div>
+              <h3>NIVEL:</h3>
+              <p> 01 </p>
+            </div>
             <div class="selector">
-              <img src="src/img/Seccion_n.jpg" class="selector-img" />
+              <!-- <img src="src/img/Seccion_n.jpg" class="selector-img" /> -->
               <div>
-                <div class="selector-button fl-1" @click="selectorClickHandler(0, $event.path[0])"></div>
-                <div class="selector-button fl-2" @click="selectorClickHandler(1, $event.path[0])"></div>
-                <div class="selector-button fl-3" @click="selectorClickHandler(2, $event.path[0])"></div>
-                <div class="selector-button fl-4" @click="selectorClickHandler(3, $event.path[0])"></div>
-                <div class="selector-button fl-5" @click="selectorClickHandler(4, $event.path[0])"></div>
+                <div class="selector-button fl-5 ml-4" @click="selectorClickHandler(4, $event.path[0])"></div>
+                <div class="selector-button fl-4 ml-4" @click="selectorClickHandler(3, $event.path[0])"></div>
+                <div class="selector-button fl-3 ml-4" @click="selectorClickHandler(2, $event.path[0])"></div>
+                <div class="selector-button fl-2 ml-4" @click="selectorClickHandler(1, $event.path[0])"></div>
+                <div class="selector-button fl-1 ml-4"   id="selected" @click="selectorClickHandler(0, $event.path[0])"></div>
               </div>
             </div>
           </div>
 
-          <div class="col-md-8">
+          <div class="col-lg-9">
             <main>
                 <div v-if="hotFloorplan">
                   <div class="media " id="architectural-plan">
@@ -108,11 +112,11 @@
           </div>
 
          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-           <div class="modal-dialog modal modal-dialog-centered">
+           <div class="modal-dialog modal-dialog-centered" :class="[imgVertical ? 'modal' : 'modal-lg']">
              <div class="modal-content">
-               <img :src="currentFloorImage"/>
-               <div class="modal-header">
-                    <h5 class="modal-title">{{currentTxt}}</h5>
+               <img id="modImg" :src="currentFloorImage"/>
+               <div class="modal-custom-header modal-color">
+                    <h5 class="modal-title modal-txt">{{currentTxt}}</h5>
                </div>
 
              </div>
