@@ -382,11 +382,10 @@ new Vue({
 
       return this.hotspotslvl[current].hotspots;
     },
-    setCurrentFloor: function(level){
-
+    setCurrentFloor: function(level, element){
       this.currentFloor = level;
       this.currentImage = this.floorImages[this.currentFloor];
-
+      this.currentSelectedFloorOnSelector = element;
     },
     setPopUpData: function (imgData,txtData){
 
@@ -410,6 +409,17 @@ new Vue({
        }else{
          this.imgVertical = false;
        }
+    },
+
+    selectorClickHandler: function(level, element){
+      if (this.currentSelectedFloorOnSelector != null){
+        console.log("entré");
+        console.log(this.currentSelectedFloorOnSelector);
+        this.currentSelectedFloorOnSelector.removeAttribute('id');
+      }
+      this.setCurrentFloor(level, element);
+      element.setAttribute ("id","selected");
+      window.location.href="index.html#architectural-plan";
     }
   }
 });

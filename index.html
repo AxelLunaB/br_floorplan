@@ -18,89 +18,93 @@
   </head>
     <div id="app">
      <body>
-      <div class="container-fluid" style="height: 100vh">
+      <div class="container-fluid">
         <nav class="navbar navbar-back">
-            <a class="navbar-brand" href="#">
-              <img :src="currentNavIco" width="100" height="50" class="d-inline-block align-top" alt="">
-            </a>
-        </nav>
+          <a class="navbar-brand ml-auto" href="#">
+              <img :src="currentNavIco" width="120em" height="60em" class="d-inline-block" alt="Logo">
+          </a>
+          </nav>
 
-        <div class="row justify-content-center" style="height: 70vh">
-          <div class="col-4 hidden-md-down">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-3">
+            <div>
+              <h3>NIVEL:</h3>
+              <p> 01 </p>
+            </div>
             <div class="selector">
-              <!-- <img src="./back/src/img/Seccion.jpg" class="selector-img" /> -->
-              <div >
-                <div class="selector-button fl-1" @click="setCurrentFloor(0)"></div>
-                <div class="selector-button fl-2" @click="setCurrentFloor(1)"></div>
-                <div class="selector-button fl-3" @click="setCurrentFloor(2)"></div>
-                <div class="selector-button fl-4" @click="setCurrentFloor(3)"></div>
-                <div class="selector-button fl-5" @click="setCurrentFloor(4)"></div>
+              <!-- <img src="src/img/Seccion_n.jpg" class="selector-img" /> -->
+              <div>
+                <div class="selector-button fl-5 ml-4" @click="selectorClickHandler(4, $event.path[0])"></div>
+                <div class="selector-button fl-4 ml-4" @click="selectorClickHandler(3, $event.path[0])"></div>
+                <div class="selector-button fl-3 ml-4" @click="selectorClickHandler(2, $event.path[0])"></div>
+                <div class="selector-button fl-2 ml-4" @click="selectorClickHandler(1, $event.path[0])"></div>
+                <div class="selector-button fl-1 ml-4"   id="selected" @click="selectorClickHandler(0, $event.path[0])"></div>
               </div>
-
             </div>
           </div>
-          <div class="col-8">
-            <main class="main">
+
+          <div class="col-lg-9">
+            <main>
                 <div v-if="hotFloorplan">
-                  <div class="container">
-                    <div class="media">
-                      <figure><img :src="currentImage"/></figure>
-                      <div class="hotspots">
-                          <template v-if="currentFloor == 0">
-                            <template v-for="(hot,key,index) in filteredFloor(0)">
-                                  <div class="hotspot">
-                                    <div class="trigger" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>
+                  <div class="media " id="architectural-plan">
 
-                                  </div>
-                            </template>
-                          </template>
-                          <template v-if="currentFloor == 1">
-                            <template v-for="(hot,key,index) in filteredFloor(1)">
-                                  <div class="hotspot">
-                                    <div class="trigger" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>                                    <div class="content">
+                    <figure><img :src="currentImage"/></figure>
+                    <div class="hotspots">
+                        <template v-if="currentFloor == 0">
+                          <template v-for="(hot,key,index) in filteredFloor(0)">
+                                <div class="hotspot">
+                                  <div class="trigger pulse" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>
 
-                                      </div>
-                                  </div>
-                            </template>
+                                </div>
                           </template>
-                          <template v-if="currentFloor == 2">
-                            <template v-for="(hot,key,index) in filteredFloor(2)">
-                                  <div class="hotspot">
-                                    <div class="trigger" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>
-                                    <div class="content">
-                                      </div>
-                                  </div>
-                            </template>
+                        </template>
+                        <template v-if="currentFloor == 1">
+                          <template v-for="(hot,key,index) in filteredFloor(1)">
+                                <div class="hotspot">
+                                  <div class="trigger" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>                                    <div class="content">
+
+                                    </div>
+                                </div>
                           </template>
-                          <template v-if="currentFloor == 3">
-                            <template v-for="(hot,key,index) in filteredFloor(3)">
-                                  <div class="hotspot">
-                                    <div class="trigger" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>
-                                    <div class="content">
-                                      </div>
-                                  </div>
-                            </template>
+                        </template>
+                        <template v-if="currentFloor == 2">
+                          <template v-for="(hot,key,index) in filteredFloor(2)">
+                                <div class="hotspot">
+                                  <div class="trigger" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>
+                                  <div class="content">
+                                    </div>
+                                </div>
                           </template>
-                          <template v-if="currentFloor == 4">
-                            <template v-for="(hot,key,index) in filteredFloor(4)">
-                                  <div class="hotspot">
-                                    <div class="trigger" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>
-                                    <div class="content">
-                                      </div>
-                                  </div>
-                            </template>
+                        </template>
+                        <template v-if="currentFloor == 3">
+                          <template v-for="(hot,key,index) in filteredFloor(3)">
+                                <div class="hotspot">
+                                  <div class="trigger" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>
+                                  <div class="content">
+                                    </div>
+                                </div>
                           </template>
-                          <template v-if="currentFloor == 5">
-                            <template v-for="(hot,key,index) in filteredFloor(5)">
-                                  <div class="hotspot">
-                                    <div class="trigger" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>
-                                    <div class="content">
-                                      </div>
-                                  </div>
-                            </template>
+                        </template>
+                        <template v-if="currentFloor == 4">
+                          <template v-for="(hot,key,index) in filteredFloor(4)">
+                                <div class="hotspot">
+                                  <div class="trigger" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>
+                                  <div class="content">
+                                    </div>
+                                </div>
                           </template>
+                        </template>
+                        <template v-if="currentFloor == 5">
+                          <template v-for="(hot,key,index) in filteredFloor(5)">
+                                <div class="hotspot">
+                                  <div class="trigger" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>
+                                  <div class="content">
+                                    </div>
+                                </div>
+                          </template>
+                        </template>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -118,14 +122,14 @@
              </div>
            </div>
          </div>
+         <div class="logo-bosque">
+            <img src="src/img/UI/logo_residence.png" class="logo-img" />
+          </div>
+          <div class="logo-club">
+            <img src="src/img/UI/logo_vipclub2.png" class="logo-img" />
+          </div>
+      </div>
 
-      </div>
-      <div class="logo-bosque">
-        <img src="src/img/UI/logo_residence.png" / class="logo-img">
-      </div>
-      <div class="logo-club">
-        <img src="src/img/UI/logo_vipclub2.png" / class="logo-img">
-      </div>
      </body>
   </div>
 </div>
