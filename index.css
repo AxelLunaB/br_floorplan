@@ -12,7 +12,7 @@
 }*/
 
 .navbar{
-  height: 7em;
+  height: 5em;
 }
 
 .navbar-brand {
@@ -64,10 +64,7 @@
   width: 100%;
 
   border-radius: 6px;
-  overflow: hidden;
-  z-index: 1;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
-  /* box-shadow: 0 6px 24px #221625; */
+  overflow: visible;
 }
 
 .container-fluid{
@@ -82,10 +79,11 @@
   align-items: center;
   margin-right: 0px!important;
   margin-left: 0px!important;
-  height: calc(100vh -7em);
-  height: -o-calc(100vh - 7em);
-  height: -webkit-calc(100vh - 7em);
-  height: -moz-calc(100vh - 7em);
+  height: calc(100vh -5em);
+  height: -o-calc(100vh - 5em);
+  height: -webkit-calc(100vh - 5em);
+  height: -moz-calc(100vh - 5em);
+  min-height: 400px;
 }
 
 .logo-bosque{
@@ -146,6 +144,7 @@
 }*/
 
 body {
+  background-color:black!important;
   font-family: Lato, sans-serif;
   line-height: 1.5;
   /* background: #fff; */
@@ -171,7 +170,6 @@ main {
 }
 
 .media{
-
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
