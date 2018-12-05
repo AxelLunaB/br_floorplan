@@ -7,9 +7,9 @@
   margin: 0;
 }
 
-html, body {
+/*html, body {
   height: 100% !important;
-}
+}*/
 
 .selector-img{
   z-index: -1;
@@ -39,10 +39,13 @@ html, body {
 }
 
 .box{
+  margin-top: 10px;
+  margin-bottom: 10px;
   height: 40em;
 }
 
 .segment {
+  background-color: white;
   height: 100%;
   
   position: relative;
@@ -51,14 +54,15 @@ html, body {
   border-radius: 6px;
   overflow: hidden;
   z-index: 1;
-  box-shadow: 0 6px 24px #221625;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+  /* box-shadow: 0 6px 24px #221625; */
 }
 
 .container-fluid{
   /* background: linear-gradient(135deg, #442c4a 0%, #221625 100%) no-repeat center center; */
-
   padding-right: 0px!important;
   padding-left: 0px!important;
+  height: 100vh;
 }
 
 .row{
@@ -83,34 +87,34 @@ html, body {
 
 .selector-button{
   position:absolute;
-  left: 10%;
-  width: 180px;
-  height: 40px;
-
+  left: 5%;
+  width: 255px;
+  height: 50px;
 }
 
 .selected{
-  background-color:rgba(72, 13, 105, 0.5);
+  background-color:rgba(72, 13, 105, 0.3);
 }
 
 .selector-button.fl-1{
-  top:67%;
+  top:64.5%;
 }
 
 .selector-button.fl-2{
-  top:53%;
+  top:50%;
 }
 
 .selector-button.fl-3{
-  top:38%;
+  height: 60px!important;
+  top:32.5%;
 }
 
 .selector-button.fl-4{
-  top:20%;
+  top:18%;
 }
 
 .selector-button.fl-5{
-  top:7%;
+  top:5%;
 }
 
 /*.main{
@@ -120,12 +124,13 @@ html, body {
 }*/
 
 body {
+  background-color: #ece9f0 !important;
   font-family: Lato, sans-serif;
   line-height: 1.5;
-  background: #fff;
+  /* background: #fff; */
 /*  background: linear-gradient(135deg, #442c4a 0%, #221625 100%) no-repeat center center;*/
   background-size: 100% 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 img {
@@ -141,7 +146,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1vw;
+  /* padding: 1vw; */
 }
 
 .media{

@@ -2,6 +2,7 @@ new Vue({
 
   el:'#app',
   data:{
+    // currentSelectedFloorOnSelector: "",
     hotFloorplan:true,
     currentOrientation: 0,
     currentTxt: "",
@@ -242,14 +243,22 @@ new Vue({
       return this.hotspotslvl[current].hotspots;
     },
     setCurrentFloor: function(level){
-
       this.currentFloor = level;
       this.currentImage = this.floorImages[this.currentFloor];
-
     },
     setPopUpData: function (imgData,txtData){
       this.currentFloorImage = imgData;
       this.currentTxt = txtData;
+    },
+
+    selectorClickHandler: function(level, element){
+      this.setCurrentFloor(level);
+      if (this.currentSelectedFloorOnSelector != null){
+        this.currentSelectedFloorOnSelector.classList.remove("selected");
+      }
+      this.currentSelectedFloorOnSelector = element; 
+      element.classList.add("selected");
+      window.location.href="index.html#architectural-plan";
     }
   }
 });

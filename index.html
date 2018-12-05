@@ -19,7 +19,7 @@
     <div id="app" class="h-100">
      <body>
       
-      <div class="container-fluid h-100">
+      <div class="container-fluid">
         <nav class="navbar navbar-dark bg-dark">
             <a class="navbar-brand" href="#">
               <img src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -29,18 +29,17 @@
       
 
         <div class="row justify-content-center">
-          <div class="col-4 my-auto">
+          <div class="col-lg-4 my-auto">
             <div class="box">
               <div class="segment">
                   <div class="selector center">
                       <!-- <img src="./back/src/img/Seccion.jpg" class="selector-img" /> -->
                       <div >
-                        <div class="selector-button fl-1" @click="setCurrentFloor(0)"></div>
-                        <div class="selector-button fl-2" @click="setCurrentFloor(1)"></div>
-                        <div class="selector-button fl-3" @click="setCurrentFloor(2)"></div>
-                        <div class="selector-button fl-4" @click="setCurrentFloor(3)"></div>
-                        <div class="selector-button fl-5" @click="setCurrentFloor(4)"></div>
-        
+                        <div class="selector-button fl-1" @click="selectorClickHandler(0, $event.path[0])"></div>
+                        <div class="selector-button fl-2" @click="selectorClickHandler(1, $event.path[0])"></div>
+                        <div class="selector-button fl-3" @click="selectorClickHandler(2, $event.path[0])"></div>
+                        <div class="selector-button fl-4" @click="selectorClickHandler(3, $event.path[0])"></div>
+                        <div class="selector-button fl-5" @click="selectorClickHandler(4, $event.path[0])"></div>
                       </div>
         
                     </div>
@@ -49,11 +48,11 @@
             </div>
             
 
-          <div class="col-8 my-auto">
+          <div class="col-lg-8 my-auto">
             <main>
                 <div v-if="hotFloorplan" class="box">
                   <div class="segment">
-                    <div class="media">
+                    <div class="media" id="architectural-plan">
                       <figure><img :src="currentImage"/></figure>
                     </div>
                     <div class="hotspots">
