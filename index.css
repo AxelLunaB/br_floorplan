@@ -109,20 +109,13 @@ main {
   padding: 1vw;
 }
 
-.container {
-  position: relative;
-  max-width: 1152px;
 
-  border-radius: 6px;
-  overflow: hidden;
-  z-index: 1;
- box-shadow: 0 6px 24px #221625;
-}
 .media{
   max-width: 100%;
   margin: auto;
   float: none;
   display: block;
+    animation: pulse 6s ease infinite;
 }
 
 .hotspots {
@@ -144,6 +137,7 @@ main {
   justify-content: center;
   align-items: center;
   pointer-events: none;
+
 }
 
 .hotspots .hotspot .trigger {
@@ -268,11 +262,29 @@ main {
   pointer-events: all;
 }
 .modal-custom{
-  min-height: calc(100% - (1.75rem * 2));
+  min-height: calc(70% - (1.75rem * 2));
+  max-height: 400px;
   max-width: 1024px;
   margin: 2.75rem auto;
 
-}
+ }
+ .pulse {
+ animation: pulse 2s infinite;
+ }
+
+ @keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255,34,85, 0.5);
+    box-shadow: 0 0 0 0 rgba(255,34,85, 0.5);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(255,34,85, 0);
+      box-shadow: 0 0 0 10px rgba(255,34,85, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(255,34,85, 0);
+      box-shadow: 0 0 0 0 rgba(255,34,85, 0);
+  }
 }
 
 @media(max-width:1024px){
