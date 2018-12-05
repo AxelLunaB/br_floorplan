@@ -4,10 +4,12 @@ new Vue({
   data:{
     hotFloorplan:true,
     currentOrientation: 0,
+    currentNavIco: 'src/img/UI/logo_vipclub.png',
     currentTxt: "",
     currentFloor: 0,
-    currentImage:'src/img/CC_01.jpg',
+    currentImage:'src/img/CC_01_n.jpg',
     currentFloorImage: '',
+    imgHori:false,
     hotspotslvl:[
      {
            hotspots:[
@@ -48,13 +50,13 @@ new Vue({
                 {
                 t: 55,
                 l: 60,
-                imgToSet:'src/img/renders/C01/CC_02.png',
+                imgToSet:'src/img/renders/C01/CC_02.jpg',
                 txtDisplay:"Salón de eventos"
                },
                {
                 t: 22,
                 l: 22,
-                imgToSet:'src/img/renders/C01/CC_02.png',
+                imgToSet:'src/img/renders/C01/CC_02.jpg',
                 txtDisplay:"Salón de eventos"
                }
              ]
@@ -68,7 +70,7 @@ new Vue({
                {
                t: 43,
                l: 30,
-               imgToSet:'src/img/renders/C02/CC04.png',
+               imgToSet:'src/img/renders/C02/CC_04.jpg',
                txtDisplay:"Kids Club"
               },
             {
@@ -82,7 +84,7 @@ new Vue({
                {
                t: 32,
                l: 43,
-               imgToSet:'src/img/renders/C02/CC05.png',
+               imgToSet:'src/img/renders/C02/CC_05.jpg',
                txtDisplay:"Kids Club"
               },
             {
@@ -96,7 +98,7 @@ new Vue({
                {
                t: 36,
                l: 64,
-               imgToSet:'src/img/renders/C02/CC06.png',
+               imgToSet:'src/img/renders/C02/CC_06.jpg',
                txtDisplay:"Junior's Club"
               },
             {
@@ -110,7 +112,7 @@ new Vue({
           {
             t: 40,
             l: 75,
-            imgToSet:'src/img/renders/C02/CC07.png',
+            imgToSet:'src/img/renders/C02/CC_07.jpg',
             txtDisplay:"Cygar room"
           },
           {
@@ -124,7 +126,7 @@ new Vue({
             {
             t: 67,
             l: 74,
-            imgToSet:'src/img/renders/C02/CC08.png',
+            imgToSet:'src/img/renders/C02/CC_08.jpg',
             txtDisplay:"Lounge bar"
            },
          {
@@ -138,7 +140,7 @@ new Vue({
           {
             t: 66,
             l: 47,
-            imgToSet:'src/img/renders/C02/CC09.png',
+            imgToSet:'src/img/renders/C02/CC_09.jpg',
             txtDisplay:"Sala cine"
            },
            {
@@ -154,32 +156,28 @@ new Vue({
         {
          hotspot:[
          {
-           t: 20,
-           l: 25,
-           imgToSet:'src/img/renders/06BR_Motor_Lobby.jpg',
-           txtDisplay:"MOTOR LOBBY"
+           t: 43,
+           l: 28.5,
+           imgToSet:'src/img/renders/C03/CC_10.jpg',
+           txtDisplay:"Box"
          },
          {
            t: 22,
-           l: 22,
-           imgToSet:'src/img/renders/06BR_Motor_Lobby.jpg',
-           txtDisplay:"MOTOR LOBBY"
+           l: 22
          }
        ]
        },
         {
          hotspot:[
          {
-           t: 70,
-           l: 25,
-           imgToSet:'src/img/renders/06BR_Motor_Lobby.jpg',
-           txtDisplay:"MOTOR LOBBY"
+           t: 67,
+           l: 29,
+           imgToSet:'src/img/renders/C03/CC_11.jpg',
+           txtDisplay:"Spinning"
          },
          {
            t: 22,
            l: 22,
-           imgToSet:'src/img/renders/06BR_Motor_Lobby.jpg',
-           txtDisplay:"MOTOR LOBBY"
          }
        ]
        },
@@ -187,9 +185,9 @@ new Vue({
          hotspot:[
            {
            t: 40,
-           l: 71,
-           imgToSet:'src/img/renders/08BR_Terraza_2.jpg',
-           txtDisplay:"TERRAZA 2"
+           l: 50,
+           imgToSet:'src/img/renders/C03/CC_12.jpg',
+           txtDisplay:"Fitness club"
           },
         {
            t: 22,
@@ -200,10 +198,10 @@ new Vue({
        {
          hotspot:[
          {
-           t: 55,
-           l: 64,
-           imgToSet:'src/img/renders/07BR_Terraza_3.jpg',
-           txtDisplay:"TERRAZA 3"
+           t: 41,
+           l: 74.7,
+           imgToSet:'src/img/renders/C03/CC_13.jpg',
+           txtDisplay:"Yoga"
           },
           {
            t: 22,
@@ -212,14 +210,154 @@ new Vue({
         ]
        }
      ]
-    }
-   ],
-    floorImages:['src/img/CC_01.jpg',
-    'src/img/CC_02.jpg',
-    'src/img/CC_03.jpg',
-    'src/img/CC_04.jpg',
-    'src/img/CC_05.jpg',
-    'src/img/TR_01.jpg']
+   }, //nivel 3
+   {
+     hotspots:[
+       {
+        hotspot:[
+        {
+          t: 46,
+          l: 49.5,
+          imgToSet:'src/img/renders/C04/CC_14.jpg',
+          txtDisplay:"Alberca"
+        },
+        {
+          t: 22,
+          l: 22
+        }
+      ]
+      },
+       {
+        hotspot:[
+        {
+          t: 43,
+          l: 69,
+          imgToSet:'src/img/renders/C04/CC_15.jpg',
+          txtDisplay:"Spa"
+        },
+        {
+          t: 22,
+          l: 22,
+        }
+      ]
+      },
+      {
+        hotspot:[
+          {
+          t: 72,
+          l: 33,
+          imgToSet:'src/img/renders/C04/CC_16.jpg',
+          txtDisplay:"Vestidores"
+         },
+       {
+          t: 22,
+          l: 22
+         }
+       ]
+      },
+      {
+        hotspot:[
+        {
+          t: 48,
+          l: 24.3,
+          imgToSet:'src/img/renders/C04/CC_17.jpg',
+          txtDisplay:"Vapor"
+         },
+         {
+          t: 22,
+          l: 22
+         }
+       ]
+      }
+    ]
+  },//nivel 4
+  {
+    hotspots:[
+      {
+       hotspot:[
+         {
+           t: 79,
+           l: 50.5,
+           imgToSet:'src/img/renders/C05/CC_18.jpg',
+           txtDisplay:"Área Paddle"
+         },
+         {
+           t: 22,
+           l: 22
+         }
+       ]
+      }
+    ]
+  },//nivel 5
+   {
+     hotspots:[
+       {
+        hotspot:[
+        {
+          t: 64,
+          l: 63.5,
+          imgToSet:'src/img/renders/TR/TR_01.jpg',
+          txtDisplay:"Lobby"
+        },
+        {
+          t: 22,
+          l: 22
+        }
+      ]
+      },
+       {
+        hotspot:[
+        {
+          t: 77,
+          l: 71,
+          imgToSet:'src/img/renders/TR/TR_02.jpg',
+          txtDisplay:"Business center"
+        },
+        {
+          t: 22,
+          l: 22,
+        }
+      ]
+      },
+      {
+        hotspot:[
+          {
+          t: 35,
+          l: 76,
+          imgToSet:'src/img/renders/TR/TR_03.jpg',
+          txtDisplay:"Vestidores"
+         },
+       {
+          t: 22,
+          l: 22
+         }
+       ]
+      },
+      {
+        hotspot:[
+        {
+          t: 35,
+          l: 58.3,
+          imgToSet:'src/img/renders/TR/TR_04.jpg',
+          txtDisplay:"Gimnasio"
+         },
+         {
+          t: 22,
+          l: 22
+         }
+       ]
+      }
+    ]
+  } //TR
+],
+
+
+    floorImages:['src/img/CC_01_n.jpg',
+    'src/img/CC_02_n.jpg',
+    'src/img/CC_03_n.jpg',
+    'src/img/CC_04_n.jpg',
+    'src/img/CC_05_n.jpg',
+    'src/img/TR_01_n.jpg']
   },
   methods:{
 
@@ -247,6 +385,11 @@ new Vue({
       this.currentSelectedFloorOnSelector = element;
     },
     setPopUpData: function (imgData,txtData){
+      var leimg = new Image();
+      leimg.src = imgData;
+      var width;
+      var height;
+      console.log(leimg.height);
       this.currentFloorImage = imgData;
       this.currentTxt = txtData;
     },
