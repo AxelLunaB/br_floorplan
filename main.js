@@ -9,7 +9,7 @@ new Vue({
     currentImage:'src/img/CC_01.jpg',
     currentFloorImage: '',
     hotspotslvl:[
-      {
+     {
            hotspots:[
              {
               hotspot:[
@@ -64,28 +64,68 @@ new Vue({
      {
        hotspots:[
          {
+             hotspot:[
+               {
+               t: 43,
+               l: 30,
+               imgToSet:'src/img/renders/C02/CC04.png',
+               txtDisplay:"Kids Club"
+              },
+            {
+               t: 22,
+               l: 22
+              }
+            ]
+           },
+           {
+             hotspot:[
+               {
+               t: 32,
+               l: 43,
+               imgToSet:'src/img/renders/C02/CC05.png',
+               txtDisplay:"Kids Club"
+              },
+            {
+               t: 22,
+               l: 22
+              }
+            ]
+           },
+           {
+             hotspot:[
+               {
+               t: 36,
+               l: 64,
+               imgToSet:'src/img/renders/C02/CC06.png',
+               txtDisplay:"Junior's Club"
+              },
+            {
+               t: 22,
+               l: 22
+              }
+            ]
+           },
+           {
           hotspot:[
           {
-            t: 70,
-            l: 25,
-            imgToSet:'src/img/renders/06BR_Motor_Lobby.jpg',
-            txtDisplay:"MOTOR LOBBY"
+            t: 40,
+            l: 75,
+            imgToSet:'src/img/renders/C02/CC07.png',
+            txtDisplay:"Cygar room"
           },
           {
             t: 22,
             l: 22,
-            imgToSet:'src/img/renders/07BR_Terraza_3.jpg',
-            txtDisplay:"TERRAZA 3"
           }
         ]
         },
         {
           hotspot:[
             {
-            t: 40,
-            l: 71,
-            imgToSet:'src/img/renders/08BR_Terraza_2.jpg',
-            txtDisplay:"TERRAZA 2"
+            t: 67,
+            l: 74,
+            imgToSet:'src/img/renders/C02/CC08.png',
+            txtDisplay:"Lounge bar"
            },
          {
             t: 22,
@@ -96,10 +136,10 @@ new Vue({
         {
           hotspot:[
           {
-            t: 77,
-            l: 64,
-            imgToSet:'src/img/renders/07BR_Terraza_3.jpg',
-            txtDisplay:"TERRAZA 3"
+            t: 66,
+            l: 47,
+            imgToSet:'src/img/renders/C02/CC09.png',
+            txtDisplay:"Sala cine"
            },
            {
             t: 22,

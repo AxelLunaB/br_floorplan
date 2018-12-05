@@ -60,8 +60,7 @@
                         <template v-if="currentFloor == 1">
                           <template v-for="(hot,key,index) in filteredFloor(1)">
                                 <div class="hotspot">
-                                  <div class="trigger" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>
-                                    <div class="content">
+                                  <div class="trigger" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>                                    <div class="content">
 
                                     </div>
                                 </div>
