@@ -10,6 +10,9 @@ new Vue({
     currentImage:'src/img/CC_01_n.jpg',
     currentFloorImage: '',
     imgHori:false,
+    widthI:0,
+    heightI:0,
+    imgVertical: false,
     hotspotslvl:[
      {
            hotspots:[
@@ -386,13 +389,27 @@ new Vue({
 
     },
     setPopUpData: function (imgData,txtData){
-      var leimg = new Image();
-      leimg.src = imgData;
-      var width;
-      var height;
-      console.log(leimg.height);
+
       this.currentFloorImage = imgData;
       this.currentTxt = txtData;
+      var img = document.getElementById('modImg');
+      var _ = this;
+      img.onload = function (){
+         _.widthI = img.naturalWidth;
+         _.heightI = img.naturalHeight;
+         if(_.widthI < _.heightI) {
+             console.log(_.widthI + " " + _.heightI + " vertical");
+             _.imgVertical = true;
+         }else{
+           _.imgVertical = false;
+         }
+      }
+       if(this.widthI < this.heightI) {
+           console.log(this.widthI + " " + this.heightI + " vertical");
+           this.imgVertical = true;
+       }else{
+         this.imgVertical = false;
+       }
     }
   }
 });

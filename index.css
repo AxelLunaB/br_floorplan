@@ -13,6 +13,8 @@ html, body {
 
 .navbar-back{
   background-image: url("src/img/UI/bar.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .selector-img{
   z-index: -1;
@@ -50,7 +52,7 @@ html, body {
   position: fixed;
   bottom:50px;
   left:50px;
-  width: 145px;
+  max-width: 145px;
   z-index:99;
 
 }
@@ -58,7 +60,7 @@ html, body {
   position: fixed;
   bottom:50px;
   left:220px;
-  width: 145px;
+  max-width: 145px;
   z-index:99;
 
 }
@@ -128,7 +130,7 @@ main {
   margin: auto;
   float: none;
   display: block;
-    animation: pulse 6s ease infinite;
+
 }
 
 .hotspots {
@@ -160,22 +162,24 @@ main {
   align-items: center;
   width: 36px;
   height: 36px;
-  background: #ff2255;
+  background: linear-gradient(to right, rgba(198,156,109,.8) 2%,rgba(247,147,30,.8) 100%);
   color: #EEE6F0;
   border-radius: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   cursor: pointer;
   pointer-events: all;
-  box-shadow: 0 0 0 0 #ff2255;
-  transition: box-shadow 0.4s;
+  box-shadow: 0 0 0 0 #fff;
+  transition: box-shadow 0.3s;
+   animation: pulse 3s infinite;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 .hotspots .hotspot .trigger:hover {
-  box-shadow: 0 0 0 8px rgba(255, 34, 85, 0.5);
+  animation:none;
+  box-shadow: 0 0 0 8px rgba(247, 147, 30, 0.5);
 }
 .hotspots .hotspot .content {
   position: absolute;
@@ -208,7 +212,7 @@ main {
   z-index: 2;
   opacity: 0;
   -webkit-transform: translate(0, -10%);
-          transform: translate(0, -10%);
+  transform: translate(0, -10%);
   transition: opacity 0.6s, -webkit-transform 0.6s;
   transition: transform 0.6s, opacity 0.6s;
   transition: transform 0.6s, opacity 0.6s, -webkit-transform 0.6s;
@@ -275,22 +279,39 @@ main {
   pointer-events: all;
 }
 
- .pulse {
- animation: pulse 2s infinite;
- }
 
+.modal-color{
+  background-color: #000;
+
+}
+.modal-custom-header{
+display: -ms-flexbox;
+display: flex;
+-ms-flex-align: start;
+align-items: flex-start;
+-ms-flex-pack: justify;
+justify-content: space-between;
+padding: 1rem;
+border-bottom: 1px solid #e9ecef;
+/* border-top-left-radius: .3rem; */
+/* border-top-right-radius: .3rem; */
+}
+
+.modal-txt{
+  color: white;
+}
  @keyframes pulse {
   0% {
-    -moz-box-shadow: 0 0 0 0 rgba(255,34,85, 0.5);
-    box-shadow: 0 0 0 0 rgba(255,34,85, 0.5);
+    -moz-box-shadow: 0 0 0 0 rgba(247,147,30, 0.5);
+    box-shadow: 0 0 0 0 rgba(247,147,30, 0.5);
   }
   70% {
-      -moz-box-shadow: 0 0 0 10px rgba(255,34,85, 0);
-      box-shadow: 0 0 0 10px rgba(255,34,85, 0);
+      -moz-box-shadow: 0 0 0 10px rgba(247,147,30, 0);
+      box-shadow: 0 0 0 10px rgba(247,147,30, 0);
   }
   100% {
-      -moz-box-shadow: 0 0 0 0 rgba(255,34,85, 0);
-      box-shadow: 0 0 0 0 rgba(255,34,85, 0);
+      -moz-box-shadow: 0 0 0 0 rgba(247,147,30, 0);
+      box-shadow: 0 0 0 0 rgba(247,147,30, 0);
   }
 }
 
