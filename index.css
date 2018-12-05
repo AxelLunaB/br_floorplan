@@ -42,14 +42,20 @@ html, body {
 }
 
 .logo{
-  float:right;
-  margin-right: 10%;
+  position: fixed;
+  bottom:5px;
+  right:5px;
+  opacity:0.5;
+  z-index:99;
+  color:white;
 }
 
 .selector-button{
   position:absolute;
   left: 12%;
   width: 180px;
+  height: 40px;
+
 }
 
 .selector-button.fl-1{
@@ -72,6 +78,11 @@ html, body {
   top:10%;
 }
 
+.main{
+  position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+}
 
 body {
   font-family: Lato, sans-serif;
@@ -105,10 +116,10 @@ main {
   border-radius: 6px;
   overflow: hidden;
   z-index: 1;
-  box-shadow: 0 6px 24px #221625;
+ box-shadow: 0 6px 24px #221625;
 }
 .media{
-  max-width: 70%;
+  max-width: 100%;
   margin: auto;
   float: none;
   display: block;
@@ -134,19 +145,7 @@ main {
   align-items: center;
   pointer-events: none;
 }
-/*
-.hotspots .hotspot:nth-child(1) .trigger {
-  top: 70%;
-  left: 25%;
-}
-.hotspots .hotspot:nth-child(2) .trigger {
-  top: 40%;
-  left: 71%;
-}
-.hotspots .hotspot:nth-child(3) .trigger {
-  top: 77%;
-  left: 64%;
-} */
+
 .hotspots .hotspot .trigger {
   position: absolute;
   display: flex;
@@ -268,6 +267,14 @@ main {
 .hotspots .hotspot.reveal .content figure figcaption {
   pointer-events: all;
 }
+.modal-custom{
+  min-height: calc(100% - (1.75rem * 2));
+  max-width: 1024px;
+  margin: 2.75rem auto;
+
+}
+}
+
 @media(max-width:1024px){
   .media{max-width: 100%;}
 }
@@ -277,10 +284,12 @@ main {
 @media (min-width:801px)  {}
 @media (min-width:1023px) { .media{max-width: 100%;}}
 @media (min-width:1281px) { /* hi-res laptops and desktops */ }
+@media (min-width: 992px){
 
+}
 @media screen and (orientation:landscape){
   .media{
-    max-width: 70%;
+    max-width: 100%;
     margin: auto;
     float: none;
     display: block;

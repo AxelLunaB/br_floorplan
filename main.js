@@ -6,7 +6,7 @@ new Vue({
     currentOrientation: 0,
     currentTxt: "",
     currentFloor: 0,
-    currentImage:'src/img/planta_ejemplo.jpg',
+    currentImage:'src/img/CC_01.jpg',
     currentFloorImage: '',
     hotspotslvl:[
       {
@@ -14,48 +14,48 @@ new Vue({
              {
               hotspot:[
               {
-                t: 70,
-                l: 25,
-                imgToSet:'src/img/renders/06BR_Motor_Lobby.jpg',
-                txtDisplay:"MOTOR LOBBY"
+                t: 71,
+                l: 45,
+                imgToSet:'src/img/renders/C01/CC_01.jpg',
+                txtDisplay:"Lobby salón eventos"
               },
               {
                 t: 22,
                 l: 22,
-                imgToSet:'src/img/renders/06BR_Motor_Lobby.jpg',
-                txtDisplay:"MOTOR LOBBY"
+                imgToSet:'src/img/renders/C01/CC_01.jpg',
+                txtDisplay:"Lobby salón eventos"
               }
             ]
             },
             {
               hotspot:[
                 {
-                t: 50,
-                l: 71,
-                imgToSet:'src/img/renders/08BR_Terraza_2.jpg',
-                txtDisplay:"TERRAZA 2"
+                t: 22,
+                l: 58,
+                imgToSet:'src/img/renders/C01/CC_03.jpg',
+                txtDisplay:"Terraza salón de eventos"
                },
                {
                 t: 32,
                 l: 22,
-                imgToSet:'src/img/renders/08BR_Terraza_2.jpg',
-                txtDisplay:"TERRAZA 2"
+                imgToSet:'src/img/renders/C01/CC_03.jpg',
+                txtDisplay:"Terraza salón de eventos"
                }
              ]
             },
             {
               hotspot:[
                 {
-                t: 87,
-                l: 64,
-                imgToSet:'src/img/renders/07BR_Terraza_3.jpg',
-                txtDisplay:"TERRAZA 3"
+                t: 55,
+                l: 60,
+                imgToSet:'src/img/renders/C01/CC_02.png',
+                txtDisplay:"Salón de eventos"
                },
                {
                 t: 22,
                 l: 22,
-                imgToSet:'src/img/renders/07BR_Terraza_3.jpg',
-                txtDisplay:"TERRAZA 3"
+                imgToSet:'src/img/renders/C01/CC_02.png',
+                txtDisplay:"Salón de eventos"
                }
              ]
             }

@@ -31,19 +31,18 @@
             <div class="selector">
               <!-- <img src="./back/src/img/Seccion.jpg" class="selector-img" /> -->
               <div >
-                <button class="selector-button fl-1" @click="setCurrentFloor(0)">Button</button>
-                <button class="selector-button fl-2" @click="setCurrentFloor(1)">Button</button>
-                <button class="selector-button fl-3" @click="setCurrentFloor(2)">Button</button>
-                <button class="selector-button fl-4" @click="setCurrentFloor(3)">Button</button>
-                <button class="selector-button fl-5" @click="setCurrentFloor(4)">Button</button>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+                <div class="selector-button fl-1" @click="setCurrentFloor(0)"></div>
+                <div class="selector-button fl-2" @click="setCurrentFloor(1)"></div>
+                <div class="selector-button fl-3" @click="setCurrentFloor(2)"></div>
+                <div class="selector-button fl-4" @click="setCurrentFloor(3)"></div>
+                <div class="selector-button fl-5" @click="setCurrentFloor(4)"></div>
 
               </div>
 
             </div>
           </div>
           <div class="col-8">
-            <main>
+            <main class="main">
                 <div v-if="hotFloorplan">
                   <div class="container">
                     <div class="media">
@@ -99,7 +98,7 @@
 
       </div>
       <div class="logo">
-        <img src="https://via.placeholder.com/150" / class="logo-img">
+        <img src="https://via.placeholder.com/200x70" / class="logo-img">
       </div>
      </body>
   </div>
@@ -108,5 +107,5 @@
 
 
    <script src="main.js"></script>
-   <script  src="hotspots.js"></script>
+
 </html>
