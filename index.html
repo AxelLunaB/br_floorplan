@@ -16,15 +16,61 @@
        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+      <!-- used for burger menu-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+      <!--  -->
   </head>
     <div id="app">
      <body>
+
       <div class="container-fluid">
         <nav class="navbar navbar-back">
           <a class="navbar-brand ml-auto" href="#">
               <img :src="currentNavIco" width="120em" height="60em" class="d-inline-block" alt="Logo">
           </a>
-          </nav>
+        </nav>
+
+              <!-- aside menu configuration  -->
+      <div>
+          <button class="menu hamburguer-button" type="button">
+            <div class="menu__item--1"></div>
+            <div class="menu__item--2"></div>
+            <div class="menu__item--3"></div>
+          </button>
+          <aside>
+            <ul class="floor-selector-on-min-width">
+
+              <div class="floor-selector-on-min-width">
+                <li class="floor-selector-on-min-width">
+                    <button type="button" class="btn btn-secondary btn-custom">
+                        <img src="src/img/UI/logo_residence.png" class="logo-img" />
+                    </button>
+                </li>
+              </div>
+
+              <div class="floor-selector-on-min-width">
+                  <li class="floor-selector-on-min-width">
+                      <div class="dropdown">
+                          <button class="btn btn-secondary btn-custom dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="src/img/UI/logo_vipclub2.png" class="logo-img" />
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Planta baja</a>
+                            <a class="dropdown-item" href="#">Piso 2</a>
+                            <a class="dropdown-item" href="#">Piso3</a>
+                            <a class="dropdown-item" href="#">Piso4</a>
+                          </div>
+                        </div>
+                  </li>
+              </div>
+
+            </ul>
+          </aside>
+        </div>
+
+  <!-- ---------------------------------------------------------------------------------------------------------------------------  -->
 
         <div class="row justify-content-center">
 
@@ -140,5 +186,11 @@
 
 
    <script src="main.js"></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js'></script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
 
+   <script  src="src/../aside-menu.js"></script>
 </html>
