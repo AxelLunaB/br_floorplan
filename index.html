@@ -44,7 +44,7 @@
 
               <div class="floor-selector-on-min-width">
                 <li class="floor-selector-on-min-width">
-                    <button type="button" class="btn btn-secondary btn-custom">
+                    <button type="button" id="vip" class="btn btn-secondary btn-custom" @click="setCurrentFloorS(5)">
                         <img src="src/img/UI/logo_residence.png" class="logo-img" />
                     </button>
                 </li>
@@ -53,14 +53,15 @@
               <div class="floor-selector-on-min-width">
                   <li class="floor-selector-on-min-width">
                       <div class="dropdown">
-                          <button class="btn btn-secondary btn-custom dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <button class="btn btn-secondary btn-custom dropdown-toggle"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="src/img/UI/logo_vipclub2.png" class="logo-img" />
                           </button>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Planta baja</a>
-                            <a class="dropdown-item" href="#">Piso 2</a>
-                            <a class="dropdown-item" href="#">Piso3</a>
-                            <a class="dropdown-item" href="#">Piso4</a>
+                          <div class="dropdown-menu custom-dropdown" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item dummy cc"  @click="setCurrentFloorS(0)" style="color:white" href="#">Planta baja</a>
+                            <a class="dropdown-item dummy cc"  @click="setCurrentFloorS(1)" style="color:white" href="#">Piso 2</a>
+                            <a class="dropdown-item dummy cc"  @click="setCurrentFloorS(2)" style="color:white" href="#">Piso3</a>
+                            <a class="dropdown-item dummy cc"  @click="setCurrentFloorS(3)" style="color:white" href="#">Piso4</a>
+                            <a class="dropdown-item dummy cc"  @click="setCurrentFloorS(4)" style="color:white" href="#">Piso5</a>
                           </div>
                         </div>
                   </li>
@@ -70,7 +71,6 @@
           </aside>
         </div>
 
-  <!-- ---------------------------------------------------------------------------------------------------------------------------  -->
 
         <div class="row justify-content-center">
 

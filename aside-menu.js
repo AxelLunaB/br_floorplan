@@ -5,6 +5,10 @@ var menu = $(".menu"),
     menuitem3 = $(".menu__item--3"),
     speed = 0.15;
 
+var vip = $("#vip")
+
+var cc = $(".cc")
+
 //instantiate  timeline
 var tl = new TimelineLite({paused:true}); //pause default
 
@@ -23,6 +27,16 @@ tl.to(menuitem1, speed, {top: 20, ease:Quint.easeOut}, "label--1")
 // play timeline on click, reverse animation if active
 menu.click(function() {
     $(this).toggleClass('active');
+
+
+});
+vip.click(function() {
+    $(menu).toggleClass('active');
+
+
+});
+cc.click(function() {
+    $(menu).toggleClass('active');
 
 
 });
