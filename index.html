@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
       <title>Bosque Real</title>
+      <link rel="favicon">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <script src="https://unpkg.com/vue/dist/vue.js"></script>
       <link rel="stylesheet" type="text/css" href="index.css">
@@ -35,15 +36,16 @@
             <div class="selector">
               <!-- <img src="src/img/Seccion_n.jpg" class="selector-img" /> -->
               <div>
-                <div class="selector-button fl-5 ml-4" @click="selectorClickHandler(4, $event.path[0])"></div>
-                <div class="selector-button fl-4 ml-4" @click="selectorClickHandler(3, $event.path[0])"></div>
-                <div class="selector-button fl-3 ml-4" @click="selectorClickHandler(2, $event.path[0])"></div>
-                <div class="selector-button fl-2 ml-4" @click="selectorClickHandler(1, $event.path[0])"></div>
-                <div class="selector-button fl-1 ml-4"   id="selected" @click="selectorClickHandler(0, $event.path[0])"></div>
+                <div class="selector-button fl-5 ml-4" v-on:click="selectorClickHandler(4, $event.target)"></div>
+                <div class="selector-button fl-4 ml-4" v-on:click="selectorClickHandler(3, $event.target)"></div>
+                <div class="selector-button fl-3 ml-4" v-on:click="selectorClickHandler(2, $event.target)"></div>
+                <div class="selector-button fl-2 ml-4" v-on:click="selectorClickHandler(1, $event.target)"></div>
+                <div class="selector-button fl-1 ml-4" v-on:click="selectorClickHandler(0, $event.target)"></div>
               </div>
             </div>
           </div>
 
+          <!-- floorplan -->
           <div class="col-lg-9">
             <main>
                 <div v-if="hotFloorplan">
@@ -62,7 +64,8 @@
                         <template v-if="currentFloor == 1">
                           <template v-for="(hot,key,index) in filteredFloor(1)">
                                 <div class="hotspot">
-                                  <div class="trigger" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>                                    <div class="content">
+                                  <div class="trigger" data-toggle="modal" data-target=".bd-example-modal-lg" @click="setPopUpData(hot.hotspot[0].imgToSet,hot.hotspot[0].txtDisplay)" v-bind:style="{top: hot.hotspot[0].t + '%', left: hot.hotspot[0].l + '%'}"><i class="fa fa-camera"></i></div>
+                                  <div class="content">
 
                                     </div>
                                 </div>

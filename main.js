@@ -4,6 +4,7 @@ new Vue({
   data:{
     hotFloorplan:true,
     currentOrientation: 0,
+    currentSelectedFloorOnSelector: null,
     currentNavIco: 'src/img/UI/logo_vipclub.png',
     currentTxt: "",
     currentFloor: 0,
@@ -413,8 +414,6 @@ new Vue({
 
     selectorClickHandler: function(level, element){
       if (this.currentSelectedFloorOnSelector != null){
-        console.log("entré");
-        console.log(this.currentSelectedFloorOnSelector);
         this.currentSelectedFloorOnSelector.removeAttribute('id');
       }
       this.setCurrentFloor(level, element);
