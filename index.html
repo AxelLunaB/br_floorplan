@@ -22,25 +22,24 @@
       <div class="container-fluid">
         <nav class="navbar navbar-back">
           <a class="navbar-brand ml-auto" href="#">
-              <img :src="currentNavIco" width="120em" height="60em" class="d-inline-block" alt="Logo">
+              <img :src="currentNavIco" width="125em" height="60em" class="d-inline-block" alt="Logo">
           </a>
           </nav>
 
         <div class="row justify-content-center">
 
-          <div class="col-lg-3">
+          <div v-if="isClub" class="col-lg-3">
             <div>
-              <h3>NIVEL:</h3>
-              <p> 01 </p>
+              <h3 class="text-left ml-5 txt-white">NIVEL: 0{{displayFloor}}</h3>
             </div>
             <div class="selector">
               <!-- <img src="src/img/Seccion_n.jpg" class="selector-img" /> -->
               <div>
-                <div class="selector-button fl-5 ml-4" v-on:click="selectorClickHandler(4, $event.target)"></div>
-                <div class="selector-button fl-4 ml-4" v-on:click="selectorClickHandler(3, $event.target)"></div>
-                <div class="selector-button fl-3 ml-4" v-on:click="selectorClickHandler(2, $event.target)"></div>
-                <div class="selector-button fl-2 ml-4" v-on:click="selectorClickHandler(1, $event.target)"></div>
-                <div class="selector-button fl-1 ml-4" v-on:click="selectorClickHandler(0, $event.target)"></div>
+                <div class="selector-button fl-5 ml-4" v-on:click="selectorClickHandler(4, $event.target); setDisplayFloor(5)"></div>
+                <div class="selector-button fl-4 ml-4" v-on:click="selectorClickHandler(3, $event.target); setDisplayFloor(4)"></div>
+                <div class="selector-button fl-3 ml-4" v-on:click="selectorClickHandler(2, $event.target); setDisplayFloor(3)"></div>
+                <div class="selector-button fl-2 ml-4" v-on:click="selectorClickHandler(1, $event.target); setDisplayFloor(2)"></div>
+                <div class="selector-button fl-1 ml-4" v-on:click="selectorClickHandler(0, $event.target); setDisplayFloor(1)"></div>
               </div>
             </div>
           </div>
@@ -125,10 +124,10 @@
              </div>
            </div>
          </div>
-         <div class="logo-bosque">
+         <div class="logo-bosque" @click="setView(false); setCurrentFloorS(5)">
             <img src="src/img/UI/logo_residence.png" class="logo-img" />
           </div>
-          <div class="logo-club">
+          <div class="logo-club" @click="setView(true); setCurrentFloorS(0)">
             <img src="src/img/UI/logo_vipclub2.png" class="logo-img" />
           </div>
       </div>

@@ -21,6 +21,7 @@
   background-size: cover;
   background-position: center;
 }
+
 /* .selector-img{
   position: absolute;
   max-width:100%;
@@ -160,6 +161,10 @@ main {
   flex-direction: column;
   align-items: center;
   /* padding: 1vw; */
+}
+
+.txt-white{
+  color: white !important;
 }
 
 .media{
