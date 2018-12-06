@@ -15,7 +15,6 @@ new Vue({
     imgHori:false,
     widthI:0,
     heightI:0,
-    imgVertical: false,
     hotspotslvl:[
      {
            hotspots:[
@@ -357,6 +356,7 @@ new Vue({
   } //TR
 ],
 
+imgVertical: false,
 
     floorImages:['src/img/CC_01_n.jpg',
     'src/img/CC_02_n.jpg',

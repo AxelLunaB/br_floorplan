@@ -85,7 +85,7 @@
   height: -o-calc(100vh - 9em - 60px - 20px);
   height: -webkit-calc(100vh - 9em - 60px - 20px);
   height: -moz-calc(100vh - 9em - 60px - 20px);
-  /* min-height: 500px; */
+  min-height: 500px;
 }
 
 .logo-bosque{
@@ -444,7 +444,7 @@ ul.floor-selector-on-min-width{
 }
 
 .dummy{}
-  
+
 .custom-dropdown{
   background-color: #000!important;
   font-family: "Sans-serif",sans-serif;
@@ -482,7 +482,9 @@ a.floor-selector-on-min-width{
   border-color: transparent !important;
 }
 
-@media only screen and (max-width: 824px) {
+
+
+@media only screen and (max-width: 813px) {
   .col-md-3 {
     display:none;
   }
@@ -491,13 +493,26 @@ a.floor-selector-on-min-width{
   .logo-club{
     display:none;
   }
-
 }
 
 
-@media only screen and (min-width: 900px) {
-
+@media only screen and (min-width: 813px) {
   #aside-menu{
     display:none;
+  }
+}
+
+@media only screen and (max-width: 769px)
+and (max-height: 1025px) and (min-width: 767px) and (min-height: 1023px){
+  .col-md-3 {
+    display:block;
+  }
+  #aside-menu{
+    display:none;
+  }
+
+  .logo-bosque,
+  .logo-club{
+    display:inline-block;
   }
 }
