@@ -107,7 +107,7 @@
 }
 
 .selector-button{
-  width: 255px;
+  width: 59%;
   height: 20px;
 }
 
@@ -116,23 +116,23 @@
 }
 
 .selector-button.fl-1{
-  height: 60px!important;
+  height: 15%;
 }
 
 .selector-button.fl-2{
-  height: 60px!important;
+  height: 13%;
 }
 
 .selector-button.fl-3{
-  height: 60px!important;
+  height: 17%;
 }
 
 .selector-button.fl-4{
-  height: 58px;
+  height: 15%;
 }
 
 .selector-button.fl-5{
-  height: 58px;
+  height: 12%;
 }
 
 /*.main{

@@ -74,19 +74,18 @@
 
         <div class="row justify-content-center">
 
-          <div v-if="isClub" class="col-md-3">
+          <div v-if="isClub" class="col-md-3" style="height: 50%">
             <div>
               <h3 class="text-left ml-5 txt-white">NIVEL: 0{{displayFloor}}</h3>
             </div>
             <div class="selector">
               <!-- <img src="src/img/Seccion_n.jpg" class="selector-img" /> -->
-              <div>
-                <div class="selector-button fl-5 ml-4" v-on:click="selectorClickHandler(4, $event.target); setDisplayFloor(5)"></div>
-                <div class="selector-button fl-4 ml-4" v-on:click="selectorClickHandler(3, $event.target); setDisplayFloor(4)"></div>
-                <div class="selector-button fl-3 ml-4" v-on:click="selectorClickHandler(2, $event.target); setDisplayFloor(3)"></div>
-                <div class="selector-button fl-2 ml-4" v-on:click="selectorClickHandler(1, $event.target); setDisplayFloor(2)"></div>
-                <div class="selector-button fl-1 ml-4" v-on:click="selectorClickHandler(0, $event.target); setDisplayFloor(1)"></div>
-              </div>
+              <div style="height:6%"></div>
+              <div class="selector-button fl-5 ml-4" v-on:click="selectorClickHandler(4, $event.target); setDisplayFloor(5)"></div>
+              <div class="selector-button fl-4 ml-4" v-on:click="selectorClickHandler(3, $event.target); setDisplayFloor(4)"></div>
+              <div class="selector-button fl-3 ml-4" v-on:click="selectorClickHandler(2, $event.target); setDisplayFloor(3)"></div>
+              <div class="selector-button fl-2 ml-4" v-on:click="selectorClickHandler(1, $event.target); setDisplayFloor(2)"></div>
+              <div class="selector-button fl-1 ml-4" v-on:click="selectorClickHandler(0, $event.target); setDisplayFloor(1)"></div>
             </div>
           </div>
 
