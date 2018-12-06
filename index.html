@@ -74,7 +74,7 @@
 
         <div class="row justify-content-center">
 
-          <div v-if="isClub" class="col-md-3" style="height: 50%">
+          <div v-if="isClub" class="col-md-2" style="height: 50%">
             <div>
               <h3 class="text-left ml-5 txt-white">NIVEL: 0{{displayFloor}}</h3>
             </div>
@@ -90,12 +90,12 @@
           </div>
 
           <!-- floorplan -->
-          <div class="col-md-9">
-            <main>
-                <div v-if="hotFloorplan">
-                  <div class="media " id="architectural-plan">
+          <div class="col-md-10 h-100">
+            <main class="h-100">
+                <div v-if="hotFloorplan" class="h-100">
+                  <div class="media h-100" id="architectural-plan">
 
-                    <figure><img :src="currentImage"/></figure>
+                    <figure class="h-100"><img style="width:100%" :src="currentImage"/></figure>
                     <div class="hotspots">
                         <template v-if="currentFloor == 0">
                           <template v-for="(hot,key,index) in filteredFloor(0)">
