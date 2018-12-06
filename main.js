@@ -3,11 +3,13 @@ new Vue({
   el:'#app',
   data:{
     hotFloorplan:true,
+    isClub:true,
     currentOrientation: 0,
     currentSelectedFloorOnSelector: null,
     currentNavIco: 'src/img/UI/logo_vipclub.png',
     currentTxt: "",
     currentFloor: 0,
+    displayFloor: 1,
     currentImage:'src/img/CC_01_n.jpg',
     currentFloorImage: '',
     imgHori:false,
@@ -419,6 +421,26 @@ new Vue({
       this.setCurrentFloor(level, element);
       element.setAttribute ("id","selected");
       window.location.href="index.html#architectural-plan";
+    },
+
+    setDisplayFloor: function (floor){
+      this.displayFloor = floor;
+    },
+    setView : function (view){
+      this.isClub = view;
+      if(this.isClub == true){
+        this.currentNavIco = 'src/img/UI/logo_vipclub2.png';
+      }
+      else {
+        this.currentNavIco = 'src/img/UI/logo_residence.png';
+      }
+    },
+    setCurrentFloorS: function(level){
+      this.currentFloor = level;
+      this.currentImage = this.floorImages[this.currentFloor];
+      if (this.currentSelectedFloorOnSelector != null){
+        this.currentSelectedFloorOnSelector.removeAttribute('id');
+      }
     }
   }
 });

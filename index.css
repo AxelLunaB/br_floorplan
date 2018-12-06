@@ -163,6 +163,10 @@ main {
   /* padding: 1vw; */
 }
 
+.txt-white{
+  color: white !important;
+}
+
 .media{
   position: absolute;
   top: 50%;
