@@ -28,12 +28,12 @@
       <div class="container-fluid">
         <nav class="navbar navbar-back">
           <a class="navbar-brand ml-auto" href="#">
-              <img :src="currentNavIco" width="125em" height="60em" class="d-inline-block" alt="Logo">
+              <img :src="currentNavIco" class="d-inline-block navbar-custom-ico" alt="Logo">
           </a>
         </nav>
 
               <!-- aside menu configuration  -->
-      <div>
+      <div id="aside-menu">
           <button class="menu hamburguer-button" type="button">
             <div class="menu__item--1"></div>
             <div class="menu__item--2"></div>
@@ -74,7 +74,7 @@
 
         <div class="row justify-content-center">
 
-          <div v-if="isClub" class="col-lg-3">
+          <div v-if="isClub" class="col-md-3">
             <div>
               <h3 class="text-left ml-5 txt-white">NIVEL: 0{{displayFloor}}</h3>
             </div>
@@ -91,7 +91,7 @@
           </div>
 
           <!-- floorplan -->
-          <div class="col-lg-9">
+          <div class="col-md-9">
             <main>
                 <div v-if="hotFloorplan">
                   <div class="media " id="architectural-plan">
