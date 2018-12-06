@@ -330,7 +330,7 @@ new Vue({
           t: 35,
           l: 76,
           imgToSet:'src/img/renders/TR/TR_03.jpg',
-          txtDisplay:"Vestidores"
+          txtDisplay:"Kids Club"
          },
        {
           t: 22,
