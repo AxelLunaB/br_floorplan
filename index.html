@@ -33,7 +33,7 @@
         </nav>
 
               <!-- aside menu configuration  -->
-      <div id="aside-menu">
+      <div id="aside-menu" class="aside-fixed">
           <button class="menu hamburguer-button" type="button">
             <div class="menu__item--1"></div>
             <div class="menu__item--2"></div>
@@ -41,7 +41,6 @@
           </button>
           <aside>
             <ul class="floor-selector-on-min-width">
-
               <div class="floor-selector-on-min-width">
                 <li class="floor-selector-on-min-width">
                     <button type="button" id="vip" class="btn btn-secondary btn-custom" @click="setCurrentFloorS(5)">
@@ -159,7 +158,7 @@
           </div>
 
          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-           <div class="modal-dialog modal-dialog-centered" :class="[imgVertical ? 'modal' : 'modal-lg']">
+           <div class="modal-dialog modal-dialog-centered" :class="[imgVertical ? 'modal' : 'modal-custom']">
              <div class="modal-content">
                <img id="modImg" :src="currentFloorImage"/>
                <div class="modal-custom-header modal-color">
